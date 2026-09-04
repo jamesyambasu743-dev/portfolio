@@ -208,7 +208,7 @@ table.data th, table.data td{ padding:9px 13px; text-align:left; border-bottom:1
 table.data th{ color:var(--ink-mute); font-weight:500; background:var(--surface-2); position:sticky; top:0; }
 table.data tr:last-child td{ border-bottom:0; }
 td.flag{ color:var(--bad); }
-td.flag::after{ content:" \u25B2"; font-size:9px; vertical-align:2px; }
+td.flag::after{ content:" ▲"; font-size:9px; vertical-align:2px; }
 td.fixed{ color:var(--ok); }
 td.miss{ color:var(--ink-mute); font-style:italic; }
 
@@ -618,7 +618,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
       tb.appendChild(tr);
     });
     $('clean-legend').innerHTML = which === 'before'
-      ? '<span><i class="dot" style="background:var(--bad)"></i>\u25B2 needs fixing</span><span>5 rows shown of 132</span>'
+      ? '<span><i class="dot" style="background:var(--bad)"></i>▲ needs fixing</span><span>5 rows shown of 132</span>'
       : '<span><i class="dot" style="background:var(--ok)"></i>cleaned &amp; typed</span><span><i class="dot" style="background:var(--ink-mute)"></i>\u2014 missing, flagged not invented</span>';
   }
 
