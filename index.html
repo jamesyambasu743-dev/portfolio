@@ -527,7 +527,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
   setText('nav-name', C.name);
 
   var cv = $('cv-btn');
-  if (C.images && C.images.resume) { cv.href = C.images.resume; }
+  if (C.images && C.images.resume) { cv.href = C.images.resume; fetch(C.images.resume, { method: 'HEAD' }).then(function (r) { if (!r.ok) { cv.style.display = 'none'; var d = document.querySelector('#hero-cta a[download]'); if (d) d.remove(); } }).catch(function () {}); }
   else { cv.style.display = 'none'; }
 
   setText('hero-eyebrow', C.tagline);
