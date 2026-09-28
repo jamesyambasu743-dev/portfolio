@@ -17,15 +17,15 @@ const CONTENT = {
 
   // ---------------------------------------------------------------- images
   images: {
-    headshot: "",            // e.g. "images/james.jpg" — shown in the hero
+    headshot: "images/james.jpg",            // e.g. "images/james.jpg" — shown in the hero
     headshotAlt: "James Yambasu",
-    resume: "James_Yambasu_Resume.pdf"   // put the PDF next to index.html
+    resume: ""   // removed per request — leave empty to hide the CV button
   },
 
   // ------------------------------------------------------------------ hero
   hero: {
     heading: "I turn messy field data into decisions people can act on.",
-    sub: "Third-year Mathematics and Statistics student at Fourah Bay College. I work the whole research chain — building the survey instrument, running the fieldwork, cleaning the data, and writing the finding — most recently on climate-informed disease surveillance at IMACS.",
+    sub: "Third-year Mathematics and Statistics student at Fourah Bay College. I work the whole research chain — building the survey instrument, running the fieldwork, cleaning the data, and wri[...]",
     stats: [
       { number: "132", label: "survey responses cleaned in a single audit" },
       { number: "29", label: "structural errors fixed in a live XLSForm" },
@@ -38,10 +38,10 @@ const CONTENT = {
     heading: "About",
     paragraphs: [
       "I am a Mathematics and Statistics student at Fourah Bay College, University of Sierra Leone, with a minor in Geology, now entering my third year.",
-      "Alongside my studies I work as Personal Assistant to a Technical Assistant at IMACS, supporting climate-informed disease surveillance: auditing KoboToolbox submissions and assisting CI-EWS and DHIS2 integration work.",
-      "I am an Undergraduate Research Fellow at the International Youth Council on Gender Equality, where I review published literature on gender equality and social equity and write research summaries. Two of my pieces have been published to the organisation's columns.",
-      "I also take on independent survey research and data analysis for NGOs, development organisations and market research firms, through Upwork and the MoCTI Learn2Earn (FOW) bounty platform, where I hold Junior rank with four bounties won.",
-      "Outside work I serve as PRO of my parish's Catholic Youth Organisation and hold a Professional Certificate in Peace Leader Studies from Hekima University College and Jesuit Worldwide Learning."
+      "Alongside my studies I work as Personal Assistant to a Technical Assistant at IMACS, supporting climate-informed disease surveillance: auditing KoboToolbox submissions and assisting CI-EWS [...]",
+      "I am an Undergraduate Research Fellow at the International Youth Council on Gender Equality, where I review published literature on gender equality and social equity and write research summ[...]",
+      "I also take on independent survey research and data analysis for NGOs, development organisations and market research firms, through Upwork and the MoCTI Learn2Earn (FOW) bounty platform, wh[...]",
+      "Outside work I serve as PRO of my parish's Catholic Youth Organisation and hold a Professional Certificate in Peace Leader Studies from Hekima University College and Jesuit Worldwide Learni[...]",
     ]
   },
 
@@ -81,7 +81,7 @@ const CONTENT = {
   // ------------------------------------------------------------ the chart
   chart: {
     heading: "STAT 225 — Time Series Analysis",
-    caption: "Group project, Fourah Bay College. Weekly height of a live plant, measured over twelve weeks and modelled as a growth curve. I led the group, wrote the report and built the workbook.",
+    caption: "Group project, Fourah Bay College. Weekly height of a live plant, measured over twelve weeks and modelled as a growth curve. I led the group, wrote the report and built the workbook.[...]",
     yLabel: "Height (cm)",
     xLabel: "Week",
     series: "Measured height",
@@ -106,14 +106,14 @@ const CONTENT = {
           { number: "132", label: "responses cleaned" },
           { number: "0", label: "responses lost" }
         ],
-        problem: "A digital commerce platform needed to know whether its proposition held up across several African markets. The survey instrument existed but had never been tested, and the team lead needed usable findings, not a raw export.",
+        problem: "A digital commerce platform needed to know whether its proposition held up across several African markets. The survey instrument existed but had never been tested, and the team [...]",
         approach: [
           "Rebuilt the survey instrument from scratch and deployed it through KoboCollect.",
-          "Audited the XLSForm before launch and corrected 29 structural errors — broken skip logic, mislabelled choice lists and constraint expressions that would have silently dropped answers in the field.",
+          "Audited the XLSForm before launch and corrected 29 structural errors — broken skip logic, mislabelled choice lists and constraint expressions that would have silently dropped answers[...]",
           "Worked as an enumerator across multiple sites, so the instrument was tested by the person who built it.",
           "Merged and cleaned 132 responses in Excel: de-duplicated keys, standardised districts and dates, and parsed free-text numerics."
         ],
-        result: "Delivered an analysis-ready dataset and a written report with the statistical findings behind the client's market positioning strategy. Every submitted response survived cleaning — nothing was dropped to make the file tidy."
+        result: "Delivered an analysis-ready dataset and a written report with the statistical findings behind the client's market positioning strategy. Every submitted response survived cleaning[...]
       },
       {
         title: "Climate-informed disease surveillance support",
@@ -123,11 +123,11 @@ const CONTENT = {
           { number: "2", label: "systems integrated" },
           { number: "Daily", label: "submission audits" }
         ],
-        problem: "Surveillance data only helps if it arrives clean and reaches the national reporting system. Submissions come in from the field continuously, and errors caught late are errors that reach the indicators.",
+        problem: "Surveillance data only helps if it arrives clean and reaches the national reporting system. Submissions come in from the field continuously, and errors caught late are errors th[...]",
         approach: [
           "Audit incoming KoboToolbox submissions and resolve form and structural errors before the data goes to analysis.",
           "Support CI-EWS and DHIS2 integration so surveillance indicators route into national reporting workflows.",
-          "Accompanied the Technical Assistant through the GC8 Funding Request Workshop in the Malaria working group, turning live transcript segments into a day-by-day debrief used for follow-up."
+          "Accompanied the Technical Assistant through the GC8 Funding Request Workshop in the Malaria working group, turning live transcript segments into a day-by-day debrief used for follow-up[...]",
         ],
         result: "Cleaner submissions reaching the surveillance pipeline, and a written record of a multi-day funding workshop that the team could act on rather than re-listen to."
       }
@@ -174,7 +174,7 @@ const CONTENT = {
         period: "2026 — Present",
         title: "Personal Assistant to the Technical Assistant",
         org: "IMACS",
-        text: "Auditing and cleaning KoboToolbox submissions for a climate-informed disease surveillance programme, and supporting CI-EWS and DHIS2 integration so surveillance indicators reach national reporting."
+        text: "Auditing and cleaning KoboToolbox submissions for a climate-informed disease surveillance programme, and supporting CI-EWS and DHIS2 integration so surveillance indicators reach na[...]",
       },
       {
         period: "Jan 2026 — Present",
@@ -186,19 +186,19 @@ const CONTENT = {
         period: "Jun 2026 — Present",
         title: "Freelance Survey Researcher & Data Analyst",
         org: "Upwork · MoCTI Learn2Earn (FOW)",
-        text: "Independent survey design, data cleaning and reporting for NGOs, development organisations and market research clients. Junior rank on Learn2Earn with four bounties won and SLE 1.6k earned since June 2026."
+        text: "Independent survey design, data cleaning and reporting for NGOs, development organisations and market research clients. Junior rank on Learn2Earn with four bounties won and SLE 1.6[...]",
       },
       {
         period: "Apr — May 2026",
         title: "Survey Research Assistant",
         org: "Insight Research and Media Firm",
-        text: "Designed and deployed KoboCollect instruments for market research serving business, organisation and government clients, then cleaned the exports and produced the statistical summaries delivered to them."
+        text: "Designed and deployed KoboCollect instruments for market research serving business, organisation and government clients, then cleaned the exports and produced the statistical summa[...]",
       },
       {
         period: "Mar 2026",
         title: "Survey Research Assistant",
         org: "Big Markit",
-        text: "Led an end-to-end market validation survey for a Pan-African digital commerce platform — instrument built from scratch, enumeration across multiple sites, and the findings behind the client's market positioning strategy."
+        text: "Led an end-to-end market validation survey for a Pan-African digital commerce platform — instrument built from scratch, enumeration across multiple sites, and the findings behind[...]",
       },
       {
         period: "2025",
@@ -212,10 +212,10 @@ const CONTENT = {
   education: {
     heading: "Education and certification",
     items: [
-      { period: "2024 — 2028", title: "BSc Mathematics & Statistics, minor in Geology", org: "Fourah Bay College, University of Sierra Leone", text: "Entering third year. Coursework includes STAT 225 Time Series Analysis." },
+      { period: "2024 — 2028", title: "BSc Mathematics & Statistics, minor in Geology", org: "Fourah Bay College, University of Sierra Leone", text: "Entering third year. Coursework includes ST[...]",
       { period: "2026", title: "Learn2Earn Programme, Cohort 2", org: "MoCTI / UNICEF", text: "All six freelancing and data modules completed." },
       { period: "May 2026", title: "Mastering Freelancing, Module 6", org: "Sierra Leone Learning Passport", text: "Certified." },
-      { period: "—", title: "Professional Certificate in Peace Leader Studies", org: "Hekima University College & Jesuit Worldwide Learning", text: "Also serving as PRO of my parish's Catholic Youth Organisation." }
+      { period: "—", title: "Professional Certificate in Peace Leader Studies", org: "Hekima University College & Jesuit Worldwide Learning", text: "Also serving as PRO of my parish's Catholic [...]",
     ]
   },
 
