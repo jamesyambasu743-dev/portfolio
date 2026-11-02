@@ -292,6 +292,9 @@ details.tablekit summary{ font-size:13px; color:var(--ink-mute); cursor:pointer;
 .gallery{ display:grid; grid-template-columns: repeat(auto-fit, minmax(240px,1fr)); gap:14px; }
 .gallery figure{ margin:0; border:1px solid var(--line); border-radius:4px; overflow:hidden; background:var(--surface); }
 .gallery img{ width:100%; aspect-ratio: 16/10; object-fit:cover; border-bottom:1px solid var(--line); }
+.case-links{ margin:16px 0 0; font-weight:600; }
+.case-links a{ color:inherit; }
+.gallery a{ display:block; }
 .gallery figcaption{ font-size:13px; color:var(--ink-soft); padding:11px 14px; }
 
 .win-item{ display:flex; align-items:baseline; justify-content:space-between; gap:16px; padding:14px 0; border-top:1px solid var(--line); }
@@ -348,7 +351,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
       <button class="btn btn-icon" id="theme-btn" type="button" aria-label="Switch to dark theme" title="Switch theme">
         <svg id="theme-icon" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"></svg>
       </button>
-      <a class="btn btn-solid" id="cv-btn" href="#" download>
+      <a class="btn btn-solid" id="cv-btn" href="#" download aria-label="Download CV">
         <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0 4-4m-4 4-4-4M4 17v2a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2v-2"/></svg>
         <span class="nav-cv-text">CV</span>
       </a>
@@ -774,6 +777,13 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
     var r = el('p', 'result', it.result);
     r.style.marginBottom = '0';
     d.appendChild(r);
+    if (it.link) {
+      var lk = el('p', 'case-links');
+      var a1 = el('a', null, 'Visit live site \u2197'); a1.href = it.link; a1.target = '_blank'; a1.rel = 'noopener';
+      lk.appendChild(a1);
+      if (it.source) { lk.appendChild(document.createTextNode('  \u00b7  ')); var a2 = el('a', null, 'Source code'); a2.href = it.source; a2.target = '_blank'; a2.rel = 'noopener'; lk.appendChild(a2); }
+      d.appendChild(lk);
+    }
 
     $('cases-body').appendChild(d);
   });
@@ -826,7 +836,8 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
       var im = el('img');
       im.src = g.src; im.alt = g.alt || ''; im.loading = 'lazy';
       im.onerror = function () { fig.remove(); };
-      fig.appendChild(im);
+      if (g.href) { var la = el('a'); la.href = g.href; la.target = '_blank'; la.rel = 'noopener'; la.setAttribute('aria-label', (g.caption || 'Open site') + ' (opens live site)'); la.appendChild(im); fig.appendChild(la); }
+      else fig.appendChild(im);
       if (g.caption) fig.appendChild(el('figcaption', null, g.caption));
       $('gallery-body').appendChild(fig);
     });
