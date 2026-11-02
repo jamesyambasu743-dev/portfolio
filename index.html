@@ -531,7 +531,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
 
   /* ---------------- head + hero ---------------- */
 
-  document.title = C.name + ' \u2014 ' + C.role;
+  document.title = C.name + ' | ' + C.role;
   setText('nav-name', C.name);
 
   var cv = $('cv-btn');
@@ -619,7 +619,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
         var td = el('td', null, shown);
         if (which === 'before') {
           if (isBad(v, ci, ri)) td.className = 'flag';
-        } else if (shown === '\u2014') {
+        } else if (shown === '(missing)') {
           td.className = 'miss';
         } else if (String(CL.before[ri][ci]) !== String(v)) {
           td.className = 'fixed';           // green marks only what actually changed
@@ -630,7 +630,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
     });
     $('clean-legend').innerHTML = which === 'before'
       ? '<span><i class="dot" style="background:var(--bad)"></i>▲ needs fixing</span><span>5 rows shown of 132</span>'
-      : '<span><i class="dot" style="background:var(--ok)"></i>cleaned &amp; typed</span><span><i class="dot" style="background:var(--ink-mute)"></i>\u2014 missing, flagged not invented</span>';
+      : '<span><i class="dot" style="background:var(--ok)"></i>cleaned &amp; typed</span><span><i class="dot" style="background:var(--ink-mute)"></i>(missing) means flagged, not invented</span>';
   }
 
   function selectTab(which) {
@@ -889,7 +889,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
     $('contact-links').appendChild(a);
   });
 
-  setText('footer-text', C.name + ' \u2014 ' + C.role + ' \u2014 updated ' + new Date().getFullYear());
+  setText('footer-text', C.name + ' | ' + C.role + ' | updated ' + new Date().getFullYear());
 
   /* ---------------- reveal on scroll ---------------- */
 
