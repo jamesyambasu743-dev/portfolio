@@ -1,4 +1,4 @@
-# Portfolio — James Yambasu
+# Portfolio — James Emmanuel Paul Yambasu
 
 Survey researcher and data analyst, Freetown, Sierra Leone.
 Live site: https://james-yambasu-portfolio-1.vercel.app

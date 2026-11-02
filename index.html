@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>James Yambasu</title>
+<title>James Emmanuel Paul Yambasu</title>
 <meta name="description" content="Survey researcher and data analyst based in Freetown, Sierra Leone. Survey design, KoboToolbox auditing, data cleaning and public health data systems.">
 <meta name="theme-color" content="#F4F5F0">
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -22,7 +22,7 @@
   --line-soft:  #E6E8DE;
   --ink:        #171B26;
   --ink-soft:   #4A4E58;
-  --ink-mute:   #6E727C;
+  --ink-mute:   #5C6069;
   --gold:       #8C6317;
   --green:      #2E5F49;
   --accent:     #2E5F49;
@@ -116,6 +116,8 @@ header{
 }
 
 .nav-name{ font-family:'Fraunces', serif; font-size:18px; font-weight:500; text-decoration:none; color:var(--ink); white-space:nowrap; }
+.nav-name{ min-width:0; overflow:hidden; text-overflow:ellipsis; }
+@media (max-width: 400px){ .nav-name{ font-size:15.5px; } }
 
 nav ul{ list-style:none; display:flex; gap:20px; margin:0; padding:0; }
 nav a{ text-decoration:none; font-size:14px; color:var(--ink-soft); }
@@ -337,7 +339,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
 
 <header>
   <div class="nav-inner">
-    <a class="nav-name" id="nav-name" href="#top">James Yambasu</a>
+    <a class="nav-name" id="nav-name" href="#top">James Emmanuel Paul Yambasu</a>
     <nav aria-label="Sections">
       <ul>
         <li><a href="#about">About</a></li>
@@ -392,7 +394,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
       <button class="tab" id="tab-before" role="tab" aria-selected="true" aria-controls="clean-table" type="button">Raw export</button>
       <button class="tab" id="tab-after"  role="tab" aria-selected="false" aria-controls="clean-table" type="button">After cleaning</button>
     </div>
-    <div class="table-scroll">
+    <div class="table-scroll" tabindex="0" role="region" aria-label="Sample survey data, scroll sideways to see all columns">
       <table class="data" id="clean-table"><thead id="clean-head"></thead><tbody id="clean-body"></tbody></table>
     </div>
     <div class="legend-row" id="clean-legend"></div>
@@ -413,7 +415,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
       </div>
       <p class="chart-note" id="chart-note"></p>
       <details class="tablekit"><summary>View the numbers</summary>
-        <div class="table-scroll" style="margin-top:10px;"><table class="data" id="chart-table"></table></div>
+        <div class="table-scroll" style="margin-top:10px;" tabindex="0" role="region" aria-label="Plant growth data table"><table class="data" id="chart-table"></table></div>
       </details>
     </div>
   </div>
@@ -670,7 +672,7 @@ footer{ padding:28px 0 48px; font-size:13px; color:var(--ink-mute); border-top:1
     var cs = getComputedStyle(document.documentElement);
     var accent = cs.getPropertyValue('--accent').trim() || '#2E5F49';
     var grid = cs.getPropertyValue('--line-soft').trim() || '#E6E8DE';
-    var mute = cs.getPropertyValue('--ink-mute').trim() || '#6E727C';
+    var mute = cs.getPropertyValue('--ink-mute').trim() || '#5C6069';
     var surf = cs.getPropertyValue('--surface').trim() || '#fff';
 
     var W = 760, H = 310, m = { t: 30, r: 50, b: 44, l: 42 };

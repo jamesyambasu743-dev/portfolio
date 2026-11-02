@@ -1,9 +1,9 @@
 const CONTENT = {
-  name: "James Yambasu",
+  name: "James Emmanuel Paul Yambasu",
   handle: "barjona_",
   role: "Survey Researcher & Data Analyst",
   tagline: "Survey researcher and data analyst — Freetown, Sierra Leone",
-  images: { headshot: "images/james.jpg", headshotAlt: "James Yambasu", resume: "James_Yambasu_Resume.pdf" },
+  images: { headshot: "images/james.jpg", headshotAlt: "James Emmanuel Paul Yambasu", resume: "James_Yambasu_Resume.pdf" },
   hero: {
     heading: "I turn messy field data into decisions people can act on.",
     sub: "Survey design, field research, data cleaning, analysis and public health data systems.",

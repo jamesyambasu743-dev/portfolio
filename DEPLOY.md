@@ -1,4 +1,4 @@
-# James Yambasu — portfolio
+# James Emmanuel Paul Yambasu — portfolio
 
 ## What's in the folder
 
@@ -24,7 +24,7 @@ wins, sample data — all of it lives in `content.js`.
 ```js
 images: {
   headshot: "images/james.jpg",
-  headshotAlt: "James Yambasu",
+  headshotAlt: "James Emmanuel Paul Yambasu",
   resume: "James_Yambasu_Resume.pdf"
 },
 ```
